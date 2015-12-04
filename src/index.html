@@ -29,6 +29,7 @@
 
     <!-- inject:js -->
   <script src="app.js"></script>
+  <script src="utilities/emailLink.js"></script>
   <script src="users/loginSvc/loginSvc.js"></script>
   <script src="users/accountView/accountView.js"></script>
   <script src="toastSvc/toastSvc.js"></script>
@@ -69,7 +70,7 @@
                     {{currentUser}}
                     <md-menu md-offset="0 50">
                         <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
-                            <identicon md-menu-origin="" username='username' size='24' ng-init="getUsername()" class="identicon"></identicon>
+                            <identicon md-menu-origin="" username='getUsername()' size='30' class="identicon"></identicon>
                         </md-button>
                         <md-menu-content width="4">
                             <md-menu-item>
@@ -97,6 +98,9 @@
                     <div flex>
                         <md-list class="top-ideas-list">
                             <md-subheader class="md-accent md-hue-1">Top Ideas</md-subheader>
+                            <div layout="row" layout-align="center center" class="no-ideas-div" ng-show="!topIdeas.length">
+                                <h3><i>No ideas</i></h3>
+                            </div>
                             <md-item ng-repeat="idea in topIdeas | orderBy:'-likes' | limitTo:5">
                                 <idea-item idea="idea" ui-sref="idea({ ideaId: idea._id })" class="idea-pointer"></idea-item>
                             </md-item>
