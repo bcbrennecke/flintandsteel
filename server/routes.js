@@ -97,7 +97,7 @@ module.exports = function(app, db) {
         ideas.create(
             req.body.title,
             req.body.description,
-            new ObjectId(req.body.authorId),
+            req.body.authorId,
             req.body.eventId,
             req.body.tags,
             req.body.rolesreq
