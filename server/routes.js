@@ -28,6 +28,11 @@ module.exports = function(app, db) {
             var authorizationType = req.headers.authorization.split(' ')[0];
             var authorizationToken = req.headers.authorization.split(' ')[1];
             var userId = authorizationToken.split(':')[0];
+            if (typeof req.body.authorId !== 'undefined' && req.body.authorId !== userId) {
+                console.log("Attempted User Spoof Detected from user " + userId);
+            }
+            req.body.authorId = userId;
+
             var authorizationId = authorizationToken.split(':')[1];
             tokens.authorize(db.getDb(), userId, authorizationId).then(function(result) {
                 if (result && authorizationType === 'Bearer') {
