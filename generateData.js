@@ -27,6 +27,7 @@ db.createCollection('events');
 var insertResult = db.users.insert(
     [
         {
+            _id: new ObjectId("aaaaaaaaaaaaaaaaaaaaaaaa"),
             firstName: 'Guybrush',
             lastName: 'Threepwood',
             fullName: 'Guybrush Threepwood',
@@ -36,6 +37,7 @@ var insertResult = db.users.insert(
             title: 'Hippy Lumberjack'
         },
         {
+            _id: new ObjectId("aaaaaaaaaaaaaaaaaaaaaaab"),
             firstName: 'Rick',
             lastName: 'Sanchez',
             fullName: 'Rick Sanchez',
@@ -45,6 +47,7 @@ var insertResult = db.users.insert(
             title: 'Street Pharmacist'
         },
         {
+            _id: new ObjectId("aaaaaaaaaaaaaaaaaaaaaaac"),
             firstName: 'Dick',
             lastName: 'Dickerson',
             fullName: 'Dick Dickerson',
@@ -54,6 +57,7 @@ var insertResult = db.users.insert(
             title: 'Money Bags Oil Man'
         },
         {
+            _id: new ObjectId("aaaaaaaaaaaaaaaaaaaaaaad"),
             firstName: 'Test',
             lastName: 'testerson',
             fullName: 'Test Testerson',
