@@ -203,10 +203,13 @@ module.exports = function(dbName, cb) {
                 idToChange = '',
                 path = '',
                 runUpdate = true;
-            
-            
+
             if (/append|create|modify/.test(command.operation)) {
                 valueObj = JSON.parse(command.value);
+
+                if (typeof valueObj === 'undefuned' || valueObj === null) {
+                    return reject(new TypeError("valueObj is NULL or undefined"));
+                }
 
                 if (collection === 'ideas') {
                     if (command.path === 'backs' || command.path === 'updates' && valueObj.authorId) {
@@ -232,13 +235,13 @@ module.exports = function(dbName, cb) {
                     valueObj = new ObjectId(valueObj);
                 }
             }
-                    
+
             switch (command.operation) {
                 case "append":
                     toChange = {};
                     valueObj._id = new ObjectId();
                     toChange[command.path] = valueObj;
-                    updateConfig = { 
+                    updateConfig = {
                         $push: toChange
                     };
                     if (collection === 'ideas') {
