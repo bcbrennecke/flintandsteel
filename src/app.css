@@ -521,3 +521,15 @@ h1.no-bottom-margin, h2.no-bottom-margin, h3.no-bottom-margin, h4.no-bottom-marg
 .account-side-panel-stat {
     color: #1976D2;
     margin: 0px 15px 0px 15px;
+}
+.top-ideas-gt-width {
+    max-width: 1200px;
+}
+
+.top-ideas-lg-width {
+    max-width: 900px;
+}
+
+.top-ideas-sm-width {
+    max-width: 600px;
+}
