@@ -62,7 +62,6 @@ angular.module('flintAndSteel')
 
             $scope.Events = [$scope.Event2, $scope.Event3, $scope.Event4, $scope.Event5];
 
-
             function getInternetExplorerVersion(navObj) {
                 var browserVersion = -1;
                 var userAgent = navObj.userAgent;
