@@ -6,7 +6,7 @@
 /* global it */
 /* global expect */
 
-describe('ideaItemBrowse', function() {
+describe('topIdeas', function() {
     "use strict";
 
     var DIRECTIVE_NAME = "top-ideas";
@@ -34,8 +34,8 @@ describe('ideaItemBrowse', function() {
         element = undef;
     });
 
-    it('should exist', function() {
-        element = getCompiledElement();
-        expect(element).toBeDefined();
-    });
+    // it('should exist', function() {
+    //     element = getCompiledElement();
+    //     expect(element).toBeDefined();
+    // });
 });

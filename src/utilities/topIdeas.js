@@ -11,19 +11,27 @@ angular.module('flintAndSteel')
                 scope: {
                     title: '@',
                     ideaslist: '=',
-                    sort: '=',
-                    limit: '=',
-                    showMoreButton: '='
+                    sort: '='//,
+                    //limit: '='//,
+                    //showMoreButton: '='
                 },
-                controller: ['$scope', function topIdeasController($scope) {
-                    $scope.newIdeaLimit = 1;
 
-                    $scope.AddIdeas = function AddIdeas() {
-                        $scope.newIdeaLimit = $scope.newIdeaLimit + 1;
-                    };
-                }],
                 templateUrl: 'utilities/topIdeas.tpl.html'
             };
+        }
+    ]
+)
+.controller('TopIdeasCtrl',
+    [
+        '$scope', '$state',
+        function($scope, $state) {
+            "use strict";
+            $scope.newIdeaLimit = 1;
+
+             function AddIdeas() {
+                $scope.newIdeaLimit = $scope.newIdeaLimit + 1;
+            };
+
         }
     ]
 );
