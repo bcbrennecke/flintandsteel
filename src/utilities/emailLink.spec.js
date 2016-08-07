@@ -6,7 +6,7 @@
 /* global it */
 /* global expect */
 
-describe('ideaItemBrowse', function() {
+describe('emailLink', function() {
     "use strict";
 
     var DIRECTIVE_NAME = "email-link";
