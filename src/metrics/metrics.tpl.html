@@ -1,3 +1,10 @@
-<div layout="column" layout-align="space-between center" ng-controller="MetricsCtrl as metrics">
-    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+<div layout="column" ng-controller="MetricsCtrl as metrics" flex>
+    <div layout="row">
+        <div id="new_ideas_chart" flex></div>
+        <div id="prototyped_ideas_chart" flex></div>
+    </div>
+    <div layout="row">
+        <div id="funded_ideas_chart" flex></div>
+        <div id="completed_ideas_chart" flex></div>
+    </div>
 </div>
