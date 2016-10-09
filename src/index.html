@@ -36,6 +36,7 @@
     <script src="lib/event-source-polyfill/eventsource.js"></script>
     <script src="lib/angular-timeline/dist/angular-timeline.js"></script>
     <script src="lib/jqcloud2/dist/jqcloud.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
 
 
 
@@ -53,6 +54,7 @@
   <script src="toastSvc/toastSvc.js"></script>
   <script src="navigation/toolbar.js"></script>
   <script src="navigation/sidenav.js"></script>
+  <script src="metrics/metrics.js"></script>
   <script src="learn/pictureDialog.js"></script>
   <script src="learn/learnItem/learnItem.js"></script>
   <script src="learn/learn.js"></script>
@@ -104,6 +106,10 @@
                         <md-button ui-sref="learn">Learn</md-button>
                         <md-tooltip md-direction="right">Learn About Innovate</md-tooltip>
                     </md-menu-item>
+                    <md-menu-item>
+                        <md-button ui-sref="metrics">Metrics</md-button>
+                        <md-tooltip md-direction="right">See Innovation Metrics</md-tooltip>
+                    </md-menu-item>
                 </md-menu-content>
             </md-menu>
             <span class="toolbar-lightbulb">
@@ -122,6 +128,10 @@
             <md-button hide show-gt-md class="toolbar-links" ui-sref="learn">
                 Learn
                 <md-tooltip md-direction="bottom">Learn About Innovate</md-tooltip>
+            </md-button>
+            <md-button hide show-gt-md class="toolbar-links" ui-sref="metrics">
+                Metrics
+                <md-tooltip md-direction="bottom">See Innovation Metrics</md-tooltip>
             </md-button>
             <span flex></span>
 

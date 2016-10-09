@@ -58,6 +58,11 @@ angular.module('flintAndSteel', [
                 templateUrl: 'about/about.tpl.html',
                 controller: ''
             })
+            .state('metrics', {
+                url: '/metrics',
+                templateUrl: 'metrics/metrics.tpl.html',
+                controller: ''
+            })
             .state('learn', {
                 url: '/learn',
                 templateUrl: 'learn/learn.tpl.html',
